@@ -1,5 +1,5 @@
 # Mailbox_Notifier
-Use ESP8266 to send user an email when Mailbox is opened.
+Use ESP8266 to send user an email when their Mailbox is opened.
 
 Requires ESP8266WiFi and ESP8266SMTP libraries. Will also need a magnetic reed switch and WIFI.
 
