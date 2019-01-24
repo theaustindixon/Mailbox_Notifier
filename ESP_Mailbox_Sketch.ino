@@ -28,13 +28,13 @@ void loop()
      Serial.print(F("Connection Status is now: "));
      Serial.println(WiFi.status());
     
-     SMTP.setEmail("****your_gmail_address****")                        // your gmail email address (for added security, use a dummy gmail)(will need to turn on "use less secure apps" in gmail settings)
-    .setPassword("****your_gmail_password****")                         // your gmail password (not very secure, but you can encrypt)
+     SMTP.setEmail("****your_gmail_address****")                        // your outgoing gmail email address (for added security, use a dummy gmail account)(will need to turn on "use less secure apps" in gmail settings)
+    .setPassword("****your_gmail_password****")                         // your outgoing gmail password (not very secure, but you can encrypt)
     .Subject("You've Got Mail!")
     .setFrom("ESP8266_SMTP")
     .setForGmail();                                                     // simply sets port to 465 and setServer("smtp.gmail.com");           
   
-    if(SMTP.Send("****your_receiving_address****", "You need to go get your mail now.")) {
+    if(SMTP.Send("****your_receiving_address****", "You need to go get your mail now.")) { // email address you want message sent to
       Serial.println(F("Message sent"));
     } else {
       Serial.print(F("Error sending message: "));
