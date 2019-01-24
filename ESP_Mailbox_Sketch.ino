@@ -34,7 +34,7 @@ void loop()
     .setFrom("ESP8266_SMTP")
     .setForGmail();                                                     // simply sets port to 465 and setServer("smtp.gmail.com");           
   
-    if(SMTP.Send("****your_recieving_address****", "You need to go get your mail now.")) {
+    if(SMTP.Send("****your_receiving_address****", "You need to go get your mail now.")) {
       Serial.println(F("Message sent"));
     } else {
       Serial.print(F("Error sending message: "));
