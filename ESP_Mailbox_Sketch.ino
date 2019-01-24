@@ -42,7 +42,7 @@ void loop()
     } 
 
     delay(30000);
-    WiFi.disconnect(true);                                              // disconect WIFI to save battery
+    WiFi.disconnect(true);                                              // disconnect WIFI to save battery
     delay(30000);
     Serial.print(F("Connection Status is now: "));
     Serial.println(WiFi.status());
